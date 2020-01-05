@@ -1,0 +1,15 @@
+
+name: BCNotification
+on: 
+  issues:
+    types: [edited, labeled]
+jobs:
+  sendGrid:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SendGrid
+        uses: peter-evans/sendgrid-action@v1.0.0
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SCRIPT_FILEPATH: ./email-sending-script.js
+    
