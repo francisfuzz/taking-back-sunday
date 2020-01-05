@@ -4,7 +4,7 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
-    to: 'lesley.chan18@gmail.com',
+    to: 'looshlee+2@github.com',
     from: 'looshlee@github.com',
     subject: 'Hello world',
     text: 'Hello plain world!',
