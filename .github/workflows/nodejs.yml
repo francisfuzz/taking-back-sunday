@@ -5,10 +5,10 @@ on:
     
 jobs:
   test:
-    if: github.actor == 'MondayLesley'
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
+      if: github.actor == 'MondayLesley'
 
     - name: SendGrid
       uses: peter-evans/sendgrid-action@v1.0.0
